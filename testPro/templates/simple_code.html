@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<!--script src="/static/js/boomerang2/boomerang.js" type="text/javascript"></script>
+<script src="/static/js/boomerang2/plugins/navtiming.js" type="text/javascript"></script>
+<script src="/static/js/boomerang2/plugins/rt.js" type="text/javascript"></script-->
+<!--script src="boomerang/plugins/bw_type.js" type="text/javascript"></script-->
+<script src="/static/js/stats.js" type="text/javascript"></script>
+<!--script src="http://s.autoimg.cn/stats/performance/20140604/stats.js"></script-->
+<script type="text/javascript">
+		function get_browser(){
+			var N=navigator.appName, ua=navigator.userAgent, tem;
+			var M=ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
+			if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];
+			M=M? [M[1], M[2]]: [N, navigator.appVersion, '-?'];
+			return M[0];
+		}
+		function get_browser_version(){
+			var N=navigator.appName, ua=navigator.userAgent, tem;
+			var M=ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
+			if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];
+			M=M? [M[1], M[2]]: [N, navigator.appVersion, '-?'];
+			return M[1];
+			}
+		var browser=get_browser();
+		var browser_version=get_browser_version();
+		var br_detect = 0; //default to run 
+		if (browser == 'MSIE'){
+			if (parseInt(browser_version) < 9){
+				var br_detect = 1; //not run the status js 
+				}
+		} //end if browser 
+		if (br_detect ==0){
+			BOOMR.init({
+				beacon_url: "/report_user_data/",
+				BW: { enabled: false },
+				RT: {
+					cookie: 'CHE168-RT'
+				}
+			});		
+		}//end if br_detect
+		
+</script>
+
+<link rel="stylesheet" type="text/css" href="/static/js/boomerang2/doc/boomerang-docs.css">
+
+</head>
+<body>
+<h1>Boomerang Howto #4: Measure more than just page load time</h1>
+
+<p id="results">
+</p>
+
+
+
+
+<!--script src="/static/js/boomerang2/doc/howtos/howtos.js" type="text/javascript"></script-->
+
+</body>
+</html>

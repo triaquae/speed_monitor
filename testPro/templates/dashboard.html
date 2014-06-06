@@ -1,0 +1,697 @@
+ 
+
+<div class="row">
+	
+	<div class="col-xs-12 col-sm-5 col-md-5 col-lg-7">
+		<ul id="sparks" class="" style="height:60px;">
+			<li class="sparks-info">
+				<h4> 平均加载时间 <span class="txt-color-blue">2.6s   <i class="fa fa-arrow-circle-up"></i>&nbsp;45%</span></h4>
+				<!--div class="sparkline txt-color-blue hidden-mobile hidden-md hidden-sm">
+					1300, 1877, 2500, 2577, 2000, 2100, 3000, 2700, 3631, 2471, 2700, 3631, 2471
+				</div-->
+			</li>
+			<li class="sparks-info">
+				<h4> 中位数 <span class="txt-color-purple"> 3356<i class="fa fa-arrow-circle-up"></i>&nbsp;45%</span></h4>
+				<!--div class="sparkline txt-color-purple hidden-mobile hidden-md hidden-sm">
+					110,150,300,130,400,240,220,310,220,300, 270, 210
+				</div-->
+			</li>
+			<li class="sparks-info">
+				<h4> 平方差 <span class="txt-color-red"><i class="fa fa-arrow-circle-down"></i>&nbsp;2447</span></h4>
+
+			</li>
+			<li class="sparks-info">
+				<h5>走势</h5>
+				<div class="sparkline txt-color-greenDark hidden-mobile hidden-md hidden-sm">
+					110,150,300,130,400,240,220,310,220,300, 270, 210,300, 270, 210
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<p id='results'></p>
+<!-- widget grid -->
+<section id="widget-grid" class="">
+
+	<!-- row -->
+	<div class="row">
+		<article class="col-sm-12">
+			<!-- new widget -->
+			<div class="jarviswidget   jarviswidget-color-green" id="wid-id-0"  data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon  jarviswidget-color-green"> <i class="glyphicon glyphicon-stats txt-color-darken"></i> </span>
+					<h2>页面速度概览 </h2>
+					
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<div  class="widget-body smart-form">
+							
+							<!--start row-->
+							<div class="row no-space">
+									<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+									
+									   <div id="page_load_trend" style="height: 400px; min-width: 310px"></div>
+
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 show-stats">
+										<div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+
+									</div>
+							</div>
+							<!--end row-->
+							
+					</div>
+
+				</div>
+				<!-- end widget div -->
+			</div>
+			<!-- end widget -->
+
+		</article>
+	</div>
+
+	<!-- end row -->
+
+	<!-- row -->
+
+	<div class="row">
+
+		<article class="col-sm-12 col-md-12 col-lg-6">
+
+			<!-- new widget -->
+			<div class="jarviswidget jarviswidget-color-orange" id="wid-id-1" data-widget-editbutton="false" >
+
+
+				<header>
+					<span class="widget-icon"> <i class="fa fa-comments txt-color-white"></i> </span>
+					<h2> 运营商分析 </h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+
+					<div class="widget-body widget-hide-overflow no-padding">
+						<!-- content goes here -->
+							===========
+
+						<!-- end content -->
+					</div>
+
+				</div>
+				<!-- end widget div -->
+			</div>
+			<!-- end widget -->
+
+			<!-- new widget -->
+			<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-3" >
+
+
+				<header>
+					<span class="widget-icon"> <i class="fa fa-calendar"></i> </span>
+					<h2> 浏览器分布</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+
+						<input class="form-control" type="text">
+
+					</div>
+					<!-- end widget edit box -->
+
+					<div class="widget-body no-padding">
+						<!-- content goes here -->
+
+
+						<!-- end content -->
+					</div>
+
+				</div>
+				<!-- end widget div -->
+			</div>
+			<!-- end widget -->
+
+		</article>
+
+		<article class="col-sm-12 col-md-12 col-lg-6">
+
+			<!-- new widget -->
+			<div class="jarviswidget  jarviswidget-color-red" id="wid-id-2"  data-widget-editbutton="false">
+
+
+				<header>
+					<span class="widget-icon"> <i class="fa fa-map-marker"></i> </span>
+					<h2>区域分析</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+					
+
+					<div class="widget-body no-padding  col-xs-12 col-sm-12 col-md-7 col-lg-7">
+						<!-- content goes here -->
+							
+							<div id="china_map" style="height:600px;"></div>
+
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th>Country</th>
+									<th>Visits</th>
+									<th class="text-align-center">User Activity</th>
+									<th class="text-align-center">Online</th>
+									<th class="text-align-center">Demographic</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="javascript:void(0);">USA</a></td>
+									<td>4,977</td>
+									<td class="text-align-center">
+									<div class="sparkline txt-color-blue text-align-center" data-sparkline-height="22px" data-sparkline-width="90px" data-sparkline-barwidth="2">
+										2700, 3631, 2471, 1300, 1877, 2500, 2577, 2700, 3631, 2471, 2000, 2100, 3000
+									</div></td>
+									<td class="text-align-center">143</td>
+									<td class="text-align-center">
+									<div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]' data-sparkline-offset="90" data-sparkline-piesize="23px">
+										17,83
+									</div>
+									<div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+										<button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-cog fa-lg"></i>
+										</button>
+										<ul class="dropdown-menu dropdown-menu-xs pull-right">
+											<li>
+												<a href="javascript:void(0);"><i class="fa fa-file fa-lg fa-fw txt-color-greenLight"></i> <u>P</u>DF</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);"><i class="fa fa-times fa-lg fa-fw txt-color-red"></i> <u>D</u>elete</a>
+											</li>
+											<li class="divider"></li>
+											<li class="text-align-center">
+												<a href="javascript:void(0);">Cancel</a>
+											</li>
+										</ul>
+									</div></td>
+								</tr>
+								<tr>
+									<td><a href="javascript:void(0);">Australia</a></td>
+									<td>4,873</td>
+									<td class="text-align-center">
+									<div class="sparkline txt-color-blue text-align-center" data-sparkline-height="22px" data-sparkline-width="90px" data-sparkline-barwidth="2">
+										10000, 1100, 3030, 1300, -1877, -2500, -2577, -2700, 3631, 2471, 4700, 1631, 2471
+									</div></td>
+									<td class="text-align-center">247</td>
+									<td class="text-align-center">
+									<div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]' data-sparkline-offset="90" data-sparkline-piesize="23px">
+										22,88
+									</div>
+									<div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+										<button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-cog fa-lg"></i>
+										</button>
+										<ul class="dropdown-menu dropdown-menu-xs pull-right">
+											<li>
+												<a href="javascript:void(0);"><i class="fa fa-file fa-lg fa-fw txt-color-greenLight"></i> <u>P</u>DF</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);"><i class="fa fa-times fa-lg fa-fw txt-color-red"></i> <u>D</u>elete</a>
+											</li>
+											<li class="divider"></li>
+											<li class="text-align-center">
+												<a href="javascript:void(0);">Cancel</a>
+											</li>
+										</ul>
+									</div></td>
+								</tr>
+
+
+
+							</tbody>
+
+						</table>
+
+						<!-- end content -->
+
+					</div>
+
+				</div>
+				<!-- end widget div -->
+			</div>
+			<!-- end widget -->
+
+			<!-- new widget -->
+			<div class="jarviswidget jarviswidget-color-greenLight" id="wid-id-4" >
+
+
+				<header>
+					<span class="widget-icon"> <i class="fa fa-check txt-color-white"></i> </span>
+					<h2> Top 15 最慢城市 </h2>
+					<!-- <div class="widget-toolbar">
+					add: non-hidden - to disable auto hide
+
+					</div>-->
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+
+					<div class="widget-body no-padding smart-form">
+						<!-- content goes here -->
+												dddd
+						<!-- end content -->
+					</div>
+
+				</div>
+				<!-- end widget div -->
+			</div>
+			<!-- end widget -->
+
+		</article>
+
+	</div>
+
+	<!-- end row -->
+
+</section>
+<!-- end widget grid -->
+
+<script type="text/javascript">
+	// DO NOT REMOVE : GLOBAL FUNCTIONS!
+	pageSetUp();
+	
+	/*
+	 * PAGE RELATED SCRIPTS
+	 */
+	
+	$(".js-status-update a").click(function () {
+	    var selText = $(this).text();
+	    var $this = $(this);
+	    $this.parents('.btn-group').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+	    $this.parents('.dropdown-menu').find('li').removeClass('active');
+	    $this.parent().addClass('active');
+	});
+	
+	/*
+	 * TODO: add a way to add more todo's to list
+	 */
+	
+	// initialize sortable
+	$(function () {
+	    $("#sortable1, #sortable2").sortable({
+	        handle: '.handle',
+	        connectWith: ".todo",
+	        update: countTasks
+	    }).disableSelection();
+	});
+	
+	// check and uncheck
+	$('.todo .checkbox > input[type="checkbox"]').click(function () {
+	    var $this = $(this).parent().parent().parent();
+	
+	    if ($(this).prop('checked')) {
+	        $this.addClass("complete");
+	
+	        // remove this if you want to undo a check list once checked
+	        //$(this).attr("disabled", true);
+	        $(this).parent().hide();
+	
+	        // once clicked - add class, copy to memory then remove and add to sortable3
+	        $this.slideUp(500, function () {
+	            $this.clone().prependTo("#sortable3").effect("highlight", {}, 800);
+	            $this.remove();
+	            countTasks();
+	        });
+	    } else {
+	        // insert undo code here...
+	    }
+	
+	})
+	// count tasks
+	function countTasks() {
+	
+	    $('.todo-group-title').each(function () {
+	        var $this = $(this);
+	        $this.find(".num-of-tasks").text($this.next().find("li").size());
+	    });
+	
+	}
+	
+	/*
+	 * RUN PAGE GRAPHS
+	 */
+
+	/*
+	 * VECTOR MAP
+	 */
+	
+	data_array = {
+	    "US": 4977,
+	    "AU": 4873,
+	    "IN": 3671,
+	    "BR": 2476,
+	    "TR": 1476,
+	    "CN": 146,
+	    "CA": 134,
+	    "BD": 100
+	};
+	
+	// Load Map dependency 1 then call for dependency 2
+	loadScript("/static/js/plugin/vectormap/jquery-jvectormap-1.2.2.min.js", loadMapFile);
+	
+	// Load Map dependency 2 then rendeder Map
+	function loadMapFile() {
+	    loadScript("/static/js/plugin/vectormap/jquery-jvectormap-world-mill-en.js", renderVectorMap);
+	}
+	
+	function renderVectorMap() {
+	    $('#vector-map').vectorMap({
+	        map: 'world_mill_en',
+	        backgroundColor: '#fff',
+	        regionStyle: {
+	            initial: {
+	                fill: '#c4c4c4'
+	            },
+	            hover: {
+	                "fill-opacity": 1
+	            }
+	        },
+	        series: {
+	            regions: [{
+	                values: data_array,
+	                scale: ['#85a8b6', '#4d7686'],
+	                normalizeFunction: 'polynomial'
+	            }]
+	        },
+	        onRegionLabelShow: function (e, el, code) {
+	            if (typeof data_array[code] == 'undefined') {
+	                e.preventDefault();
+	            } else {
+	                var countrylbl = data_array[code];
+	                el.html(el.html() + ': ' + countrylbl + ' visits');
+	            }
+	        }
+	    });
+	}
+	
+	
+
+/*
+	//alert(navigator.appName + navigator.userAgent);
+
+
+	function get_browser(){
+    var N=navigator.appName, ua=navigator.userAgent, tem;
+    var M=ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
+    if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];
+    M=M? [M[1], M[2]]: [N, navigator.appVersion, '-?'];
+    return M[0];
+    }
+function get_browser_version(){
+    var N=navigator.appName, ua=navigator.userAgent, tem;
+    var M=ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
+    if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];
+    M=M? [M[1], M[2]]: [N, navigator.appVersion, '-?'];
+    return M[1];
+    }
+    var browser=get_browser();
+var browser_version=get_browser_version();
+
+	//alert(browser + browser_version);
+*/
+	
+	
+	
+//start highchart graph
+
+//页面速度概览
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: '全网加载速度分布'
+        },
+        tooltip: {
+    	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            data: [
+                ['1-2秒',   45.0],
+                ['2-4秒',       26.8],
+                {
+                    name: '4-6秒',
+                    y: 12.8,
+                    sliced: true,
+                    selected: true
+                },
+                ['6-8秒',    8.5],
+                ['8-10秒',     6.2],
+                ['10秒以上',   0.7]
+            ]
+        }]
+    });
+});
+   //每日页面加载时间趋势
+
+
+//basic line
+
+$(function () {
+        $('#page_load_trend').highcharts({
+            title: {
+                text: '近期页面速度走势',
+                x: -20 //center
+            },
+            subtitle: {
+                text: 'Source:自动化组',
+                x: -20
+            },
+            xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: 'Temperature (°C)'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: '°C'
+            },
+            legend: {
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom',
+                borderWidth: 0
+            },
+            series: [{
+                name: 'Tokyo',
+                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+            }, {
+                name: 'New York',
+                data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+            }, {
+                name: 'Berlin',
+                data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+            }, {
+                name: 'London',
+                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            }]
+        });
+    });
+    
+
+//end 页面速度概览
+</script>
+<script src="/static/echarts-master/doc/example/www/js/esl.js"></script>
+<script>
+//echart map
+
+// 路径配置
+require.config({
+	paths:{ 
+		'echarts' : '/static/echarts-master/doc/example/www/js/echarts',
+		'echarts/chart/map' : '/static/echarts-master/doc/example/www/js/echarts-map'
+	}
+});
+
+// 使用
+require(
+	[
+		'echarts',
+		'echarts/chart/map' // 使用柱状图就加载bar模块，按需加载
+	],
+	function(ec) {
+		// 基于准备好的dom，初始化echarts图表
+		var myChart = ec.init(document.getElementById('china_map')); 
+		
+		option = {
+			title : {
+				text: '全国各省页面加载速度分析',
+				subtext: 'by: 自动化组',
+				x:'center'
+			},
+			tooltip : {
+				trigger: 'item'
+			},
+			legend: {
+				orient: 'vertical',
+				x:'left',
+				data:['OnLoad时间']
+			},
+			dataRange: {
+				min: 0,
+				max: 12500,
+				text:['慢','快'],           // 文本，默认为数值文本
+				calculable : true
+			},
+			toolbox: {
+				show : true,
+				orient : 'vertical',
+				x: 'right',
+				y: 'center',
+
+			},
+			series : [
+				{
+					name: 'OnLoad时间',
+					type: 'map',
+					mapType: 'china',
+					itemStyle:{
+						normal:{label:{show:true}},
+						emphasis:{label:{show:true}}
+					},
+					data:[
+						{name: '北京',value: Math.round(Math.random()*10000)},
+						{name: '天津',value: Math.round(Math.random()*10000)},
+						{name: '上海',value: Math.round(Math.random()*10000)},
+						{name: '重庆',value: Math.round(Math.random()*10000)},
+						{name: '河北',value: Math.round(Math.random()*10000)},
+						{name: '河南',value: Math.round(Math.random()*10000)},
+						{name: '云南',value: Math.round(Math.random()*10000)},
+						{name: '辽宁',value: Math.round(Math.random()*10000)},
+						{name: '黑龙江',value: Math.round(Math.random()*10000)},
+						{name: '湖南',value: Math.round(Math.random()*10000)},
+						{name: '安徽',value: Math.round(Math.random()*10000)},
+						{name: '山东',value: Math.round(Math.random()*10000)},
+						{name: '新疆',value: Math.round(Math.random()*10000)},
+						{name: '江苏',value: Math.round(Math.random()*10000)},
+						{name: '浙江',value: Math.round(Math.random()*10000)},
+						{name: '江西',value: Math.round(Math.random()*10000)},
+						{name: '湖北',value: Math.round(Math.random()*10000)},
+						{name: '广西',value: Math.round(Math.random()*10000)},
+						{name: '甘肃',value: Math.round(Math.random()*10000)},
+						{name: '山西',value: Math.round(Math.random()*10000)},
+						{name: '内蒙古',value: Math.round(Math.random()*10000)},
+						{name: '陕西',value: Math.round(Math.random()*10000)},
+						{name: '吉林',value: Math.round(Math.random()*10000)},
+						{name: '福建',value: Math.round(Math.random()*10000)},
+						{name: '贵州',value: Math.round(Math.random()*10000)},
+						{name: '广东',value: Math.round(Math.random()*10000)},
+						{name: '青海',value: Math.round(Math.random()*10000)},
+						{name: '西藏',value: Math.round(Math.random()*10000)},
+						{name: '四川',value: Math.round(Math.random()*10000)},
+						{name: '宁夏',value: Math.round(Math.random()*10000)},
+						{name: '海南',value: Math.round(Math.random()*10000)},
+						{name: '台湾',value: Math.round(Math.random()*10000)},
+						{name: '香港',value: Math.round(Math.random()*10000)},
+						{name: '澳门',value: Math.round(Math.random()*10000)}
+					]
+				}
+			]
+		};
+		   
+
+		// 为echarts对象加载数据 
+		myChart.setOption(option); 
+	}
+);
+
+//end echart map
+
+
+</script>
+
+
+
+
+<script src="/static/js/boomerang/boomerang.js" type="text/javascript"></script>
+<script src="/static/js/boomerang/plugins/navtiming.js" type="text/javascript"></script>
+<script src="/static/js/boomerang/plugins/rt.js" type="text/javascript"></script>
+<script src="/static/js/boomerang/plugins/bw_type.js" type="text/javascript"></script>
+<script>
+/*
+BOOMR.init({
+                beacon_url: "/report_user_data/",
+                user_ip: '10.0.0.1',
+                BW: {
+                        base_url: '/static/js/boomerang/images/',
+                        cookie: 'HOWTO-BA'
+                },
+                RT: {
+                        cookie: 'HOWTO-RT'
+                },
+
+        });
+
+
+BOOMR.subscribe('before_beacon', function(o) {
+	var html = "";
+	if(o.t_done) { html += "This page took " + o.t_done + "ms to load<br>"; }
+	if(o.bw) { html += "Your bandwidth to this server is " + parseInt(o.bw/1024) + "kbps (&#x00b1;" + parseInt(o.bw_err*100/o.bw) + "%)<br>"; }
+	if(o.lat) { html += "Your latency to this server is " + parseInt(o.lat) + "&#x00b1;" + o.lat_err + "ms<br>"; }
+
+	document.getElementById('results').innerHTML = html;
+});
+*/
+</script>
