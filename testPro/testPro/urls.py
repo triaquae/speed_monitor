@@ -10,6 +10,10 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+	(r'^accounts/login/$', 'django.contrib.auth.views.login',{'template_name': 'login.html'}),
+	(r'^login/$', login),
+	(r'^logout/$',logout),
+	(r'^login_auth/$', login_auth),
 	(r'^performance_test/$', performance_test),
 	(r'^$', index),
 	(r'^dashboard/$',dashboard),
@@ -19,7 +23,9 @@ urlpatterns = patterns('',
 	(r'^graph/$', graph),
 	(r'^get_squid_data/$', get_squid_data),
 	(r'report_user_data/$', collect_user_data),
-	(r'^stock/$', stock)
+	(r'^trend/$', stock),
+	(r'^getCityList/$', getCityList),
+	(r'^getReport/$',getReport)
    
 )
 

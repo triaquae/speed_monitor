@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Highstock Example</title>
+		<title>{{ graph_title }}</title>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script type="text/javascript">
-$(function() {
+/*$(function() {
 
 	$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
 		// Create the chart
@@ -19,11 +19,11 @@ $(function() {
 			},
 
 			title : {
-				text : 'AAPL Stock Price'
+				text : '页面加载速度趋势走向'
 			},
 			
 			series : [{
-				name : 'AAPL',
+				name : 'onLoad',
 				data : data,
 				tooltip: {
 					valueDecimals: 2
@@ -32,8 +32,129 @@ $(function() {
 		});
 	});
 
-});
+}); */
 
+
+
+$(function() {
+	var seriesOptions = [],
+		yAxisOptions = [],
+		seriesCounter = 0,
+		names = ['onLoad', 'domReady', 'dnsLookup','firstPaint','firstByte','responseTime'],
+		colors = Highcharts.getOptions().colors;
+	
+	$.each(names, function(i, name) {
+
+		//$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename='+ name.toLowerCase() +'-c.json&callback=?',	function(data) {
+		$.getJSON('/getReport/',{key_name: name},	function(data) {
+			seriesOptions[i] = {
+				name: name,
+				data: data
+			};
+
+			// As we're loading the data asynchronously, we don't know what order it will arrive. So
+			// we keep a counter and create the chart when all the data is loaded.
+			seriesCounter++;
+
+			if (seriesCounter == names.length) {
+				createChart();
+			}
+		});
+	});
+
+
+
+	// create the chart when all data is loaded
+	function createChart() {
+
+		$('#container').highcharts('StockChart', {
+            chart: {
+                type: 'area'
+            },
+
+			
+		    /*rangeSelector: {
+				inputEnabled: $('#container').width() > 480,
+		        selected: 1
+		    },
+
+		    yAxis: {
+		    	labels: {
+		    		formatter: function() {
+		    			return (this.value > 0 ? '+' : '') + this.value + '%';
+		    		}
+		    	},
+		    	plotLines: [{
+		    		value: 0,
+		    		width: 2,
+		    		color: 'silver'
+		    	}]
+		    },
+		    
+		    plotOptions: {
+		    	series: {
+		    		compare: 'percent'
+		    	}
+		    },*/
+		    rangeSelector: {
+	    	 buttons: [{
+					type: 'day',
+					count: 1,
+					text: '1天'
+				}, {
+					type: 'week',
+					count: 1,
+					text: '1周'
+				}, {
+					type: 'month',
+					count: 1,
+					text: '1月'
+				},{
+					type: 'month',
+					count: 3,
+					text: '3月'
+				}, {
+					type: 'ytd',
+					text: 'YTD'
+				}, {
+					type: 'year',
+					count: 1,
+					text: '1年'
+				}, {
+					type: 'all',
+					text: 'All'
+				}],
+			  selected: 1
+			},
+            title: {
+                text: "{{graph_title}}"
+				
+            },
+            subtitle: {
+                text: 'By:自动化组',
+                x: -20
+            },
+			 credits: {
+			 
+				  enabled: false
+			 },			
+			legend: {
+				enabled: true,
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom',
+                borderWidth: 0
+            },
+		    tooltip: {
+		    	pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b>ms<br/>',
+		    	
+		    },
+		    
+		    series: seriesOptions
+		});
+	}
+
+});
 		</script>
 	</head>
 	<body>
